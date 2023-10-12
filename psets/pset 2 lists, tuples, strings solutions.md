@@ -118,7 +118,7 @@ def count_vowels(s):
 ```python
 squares = [i**2 for i in range(1, 11)]
 ```
-
+Note: `i**2` is $i^2$
 
 2. Create a list of all even numbers between 1 and 50 using list comprehension.
 ```python
