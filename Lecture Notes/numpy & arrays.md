@@ -7,7 +7,7 @@ NumPy's main object is the <u>homogeneous multidimensional array.</u> It is a ta
 
 Import: 
 ```python
-import numpy #as np
+import numpy as np
 ```
 
 **Attributes of arrays**:
