@@ -67,6 +67,15 @@ a, b = b, a
 sentence = "Python is great!"
 words = sentence.split()
 ```
+`sentence.split()`: The `split()` method is a string method in Python. When called without any arguments, it splits a string wherever it finds whitespace characters (like spaces, tabs, etc.) and returns a list of substrings.
+
+Given the string in the `sentence` variable, `"Python is great!"`, here's how `split()` works:
+
+- It identifies the first space after the word 'Python' and splits the string there.
+- It then identifies the next space after the word 'is' and splits the string again.
+- Finally, since there's no more spaces after the word 'great!', that word is taken as the final element.
+
+The result list will be: `['Python', 'is', 'great!']`
 
 
 2. Join the list `['Python', 'is', 'great!']` into a single string.
@@ -74,6 +83,18 @@ words = sentence.split()
 word_list = ['Python', 'is', 'great!']
 joined_sentence = ' '.join(word_list)
 ```
+`' '.join(word_list)`: The `join()` method is a string method in Python. It takes an iterable (like a list or a tuple) as an argument and concatenates its elements into a single string. The string on which `join()` is called (in this case, `' '`) is used as the delimiter between each element. So, `' '.join(word_list)` takes each word from the `word_list` and joins them into a single string, using a space (`' '`) as the delimiter.
+
+For our given `word_list`, the `join()` method does the following:
+
+- Takes the first word, 'Python', and starts building the final string.
+- Inserts a space.
+- Adds the second word, 'is'.
+- Inserts another space.
+- Finally, adds the third word, 'great!'.
+
+This results in the single string `'Python is great!'`.
+
 
 
 3. Write a function that counts the number of vowels in a given string.
