@@ -135,7 +135,6 @@ After the function execution is complete, the next `print(y)` statement is outsi
 
 --- 
 
-
 #### Challenge 
 
 1. Write a function that takes a string as input and returns the string in reverse order.

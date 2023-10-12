@@ -81,6 +81,7 @@ joined_sentence = ' '.join(word_list)
 def count_vowels(s):
     return sum(1 for char in s if char.lower() in 'aeiou')
 ```
+- for every `char` in our word `s`, if the lower case of that `char` is either a,e,i,o,u: then we add to the sum statement +1 for every instance. 
 
 ---
 #### List Comprehensions
