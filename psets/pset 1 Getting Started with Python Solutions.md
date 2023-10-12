@@ -60,7 +60,7 @@ def greet(name="Guest"):
 ```
 What will be the output of `greet()` and `greet("Alice")`?
 - `greet()` will output `Hello, Guest!`
-- `greet("Alice")` will output `Hello, Alice!`
+- For `greet("Alice")`: In this case, you're providing the argument "Alice", so it'll override the default value "Guest". Thus, the output will be:`Hello, Alice!`
 
 ---
 
@@ -125,7 +125,16 @@ print(y)
 20
 ```
 
+The global variable `y` is set to 20.
+The function `example_function` is defined but not yet executed.
+The function `example_function` is called.
+    - Inside the function, a local variable `y` (which is separate from the global `y`) is set to 10.
+    - The `print(y)` statement inside the function prints the local variable, so it outputs `10`.
+After the function execution is complete, the next `print(y)` statement is outside of the function and refers to the global `y`, so it prints `20`.
+
+
 --- 
+
 
 #### Challenge 
 
