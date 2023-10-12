@@ -53,7 +53,7 @@ What will be the output of `greet()` and `greet("Alice")`?
 ```
 
 
-2. Modify the program to accept an integer �n as input and print the pattern of height $n$.
+2. Modify the program to accept an integer $n$ as input and print the pattern of height $n$.
 
 
 ---
