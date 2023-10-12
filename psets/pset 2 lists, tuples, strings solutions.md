@@ -103,6 +103,23 @@ evens = [i for i in range(1, 51) if i % 2 == 0]
 nums = [i for i in range(1, 101) if (i % 3 == 0) ^ (i % 5 == 0)]
 ```
 
+`for i in range(1, 101)`: This iterates over all numbers between 1 and 100 (inclusive).
+
+`if (i % 3 == 0) ^ (i % 5 == 0)`: This is the condition that each number `i` must satisfy in order to be included in the resulting list.
+
+Dissecting the condition:
+- `i % 3 == 0`: This checks if `i` is divisible by 3.
+- `i % 5 == 0`: This checks if `i` is divisible by 5.
+
+- `^`: This is the bitwise XOR (exclusive or) operator. It returns `True` if exactly one of its operands is `True` and the other is `False`, and `False` otherwise.
+
+The condition `(i % 3 == 0) ^ (i % 5 == 0)` will be `True` in two scenarios:
+
+-  `i` is divisible by 3 but not by 5. 
+-  `i` is divisible by 5 but not by 3.
+
+However, it will be `False` if `i` is divisible by both 3 and 5, which ensures numbers divisible by both (i.e., divisible by 15) are not included in the resulting list.
+
 ---
 #### Challenges
 
