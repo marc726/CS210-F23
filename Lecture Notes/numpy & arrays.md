@@ -121,7 +121,7 @@ Output:
 np.eye(3)
 ```
 
-
+See #advancednpeye
 
 7. `numpy.full(shape, fill_value, dtype=None, order='C')`
 - Returns a new array of given shape and type, filled with `fill_value`.
@@ -265,5 +265,76 @@ Linear algebra operations like dot products, vector norms, determinants, eigenva
 A = np.array([[1, 1], [0, 1]])
 B = np.array([[2, 0], [3, 4]])
 print(np.dot(A, B))  # matrix product
+```
+
+---
+
+
+Note: #advancednpeye
+
+
+Observe: 
+```python
+np.eye(5, dtype='int64')*4+np.ones((5,5), dtype='int64')
+```
+
+Lets break this down: 
+
+Output:
+```
+array([[5, 1, 1, 1, 1], 
+	   [1, 5, 1, 1, 1], 
+	   [1, 1, 5, 1, 1], 
+	   [1, 1, 1, 5, 1], 
+	   [1, 1, 1, 1, 5]])
+```
+
+
+##### Left Side
+
+**`np.eye(5, dtype='int64')`**:
+- This creates a 5x5 identity matrix with integer data type `int64`. An identity matrix is a square matrix in which all the elements of the main diagonal are ones and all other elements are zeros.
+Result: 
+```
+[[1 0 0 0 0]
+ [0 1 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 1]]
+```
+
+
+**`*4`**:
+- This multiplies every element in the matrix by 4.
+Result:
+```
+[[4 0 0 0 0]
+ [0 4 0 0 0]
+ [0 0 4 0 0]
+ [0 0 0 4 0]
+ [0 0 0 0 4]]
+```
+
+##### Right Side
+
+**`np.ones((5,5), dtype='int64')`**:
+- This creates a 5x5 matrix filled with ones of data type `int64`.
+Result:
+```
+[[1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]]
+```
+
+**`+`**:
+- This adds the two matrices element-wise. Thus the end result:
+```
+[[5 1 1 1 1]
+ [1 5 1 1 1]
+ [1 1 5 1 1]
+ [1 1 1 5 1]
+ [1 1 1 1 5]]
 ```
 
