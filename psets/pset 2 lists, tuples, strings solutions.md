@@ -17,7 +17,7 @@ length = len(even_numbers)
 ```python
 is_12_present = 12 in even_numbers
 ```
-
+Returns `bool`
 
 4. Write a function that accepts a list of numbers and returns the average of the numbers.
 ```python
@@ -37,6 +37,13 @@ def join_words(word_list):
 my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
 extracted_elements = my_list[3:8]
 ```
+`extracted_elements = my_list[3:8]`: This is using Python's list slicing syntax to extract a part of the list.
+
+The slicing syntax `list[start:stop]` extracts elements from the `start` index up to, but not including, the `stop` index. In Python, list indices start at 0.
+
+- The `start` in our slice is `3`, so the extraction begins from the fourth element of the list (since the first element is at index 0).
+- The `stop` in our slice is `8`, so the extraction will go up to, but not include, the element at index 8.
+
 
 ---
 #### Tuples
