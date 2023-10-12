@@ -70,7 +70,7 @@ for i in range(n):
 
 #### String Replacement
 
-Given the string `w = "Where is the place?"`, which of the following lines of Python code produces the output `"place is the Where?"`?
+Given the string `w = "Where is the place"`, which of the following lines of Python code produces the output `"place is the Where"`?
 
 - (a) `w.split()[-2] + " " + " ".join(w.split()[:-2])`
 - (b) `" ".join(reversed(w.split()))`
