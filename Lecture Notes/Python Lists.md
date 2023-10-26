@@ -88,7 +88,48 @@ while 'a' in ex_list:
 
 
 
+#### List Comprehensions
 
+Python has the ability to build a list dynamically. 
 
+Example: 
+
+`ez_list = [i+1 for i in range (5)]`            (`i` starts at 0. thus the `i+1`)
+Output: `[1,2,3,4,5]`
+
+Can also use if statements during comprehension:
+odd_list = `[i+1 for i in range (10) if i%2 == 0]`
+Output: `[1,3,5,7,9]`
+
+function to produce list of tuples in the form, $(x,x^2)$ where $1\le x\le 10$
+```Python
+def square_tuples(n=10):
+    """ Returns a list of tuples of form (x,x^2) where 1<=x<=n. """
+    return [(i,i*i) for i in range (1,n+1)]
+```
+``` 
+Output: [(1, 1), (2, 4), (3, 9), (4, 16), (5, 25), (6, 36), (7, 49), (8, 64), (9, 81), (10, 100)]
+```
+
+given two lists of xs and ys produce all $(x,y)$ pairs where $x\ne y$
+
+```Python
+def unmatched_pairs(xs, ys):
+	return [(x,y) for x in xs for y in ys if (x!=y)]
+```
+
+Notes: 
+	Can do more than one for loop in the comprehension
+
+Comprehension follow the structure: 
+`(values) = [(expression) for (value) in (collection)]`
+
+write a *recursive* function to <u>concatenate</u> two lists
+```Python
+def concat_lists(list1, list2):
+    if not list1:
+        return list2
+    return [list1[0]] + concat_lists(list1[1:], list2)
+```
 
 
