@@ -133,3 +133,17 @@ def concat_lists(list1, list2):
 ```
 
 
+
+```Python
+[i+1 for i in range (3) for j in range (3)]
+```
+Imagine this as a nest for loop in java:
+```Java
+for (int i = 0; i < 3; i++){
+	for (int j = 0; j < 3; j++){
+		print(i+1);
+	}
+}
+```
+Output: `[1, 1, 1, 2, 2, 2, 3, 3, 3]`
+
